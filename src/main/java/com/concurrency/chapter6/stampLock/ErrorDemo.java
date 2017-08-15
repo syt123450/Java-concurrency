@@ -27,7 +27,7 @@ public class ErrorDemo {
             @Override
             public void run() {
                 long readLock = lock.readLock();
-                LockSupport.parkNanos(600000000000L);
+                LockSupport.park();
                 lock.unlock(readLock);
             }
         }.start();
